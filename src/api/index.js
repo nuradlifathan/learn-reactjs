@@ -8,4 +8,7 @@ export const jsonProducts = axios.create({
   baseURL: "http://localhost:2000",
 })
 
+export const employeeList = axios.create({
+  baseURL: "http://localhost:2001",
+})
 export default axiosInstance

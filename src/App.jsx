@@ -12,6 +12,8 @@ import Exercise from "./pages/Exercise"
 import UserList from "./pages/UserList"
 import ProductList from "./pages/ProductList"
 import ProductEdit from "./pages/ProductEdit"
+import EmployeeList from "./pages/EmployeeList"
+import EmployeeRegister from "./pages/EmployeeRegister"
 import { Text, Tab, Tabs, TabList, TabPanels, Box } from "@chakra-ui/react"
 import { useSelector } from "react-redux"
 
@@ -58,7 +60,7 @@ function App() {
       <hr />
       {/* <Text fontWeight="1000">Counter : {counterSelector.value}</Text> */}
       <Tabs variant="enclosed">
-        <TabList>
+        <TabList fontWeight="4">
           <Tab>
             <Link to="Home"> Home</Link>
           </Tab>
@@ -92,6 +94,12 @@ function App() {
           <Tab>
             <Link to="ProductList">ProductList</Link>
           </Tab>
+          <Tab>
+            <Link to="EmployeeList">EmployeeList</Link>
+          </Tab>
+          <Tab>
+            <Link to="EmployeeRegister">EmployeeRegister</Link>
+          </Tab>
         </TabList>
       </Tabs>
       {/*  */}
@@ -109,8 +117,11 @@ function App() {
         <Route path="/ReduxCounter" element={<ReduxCounter />} />
         <Route path="/Exercise" element={<Exercise />} />
         <Route path="/UserList" element={<UserList />} />
+        {/* Route params */}
         <Route path="/ProductList" element={<ProductList />} />
         <Route path="/ProductEdit/:id" element={<ProductEdit />} />
+        <Route path="/EmployeeList" element={<EmployeeList />} />
+        <Route path="/EmployeeRegister" element={<EmployeeRegister />} />
       </Routes>
     </Box>
   )

@@ -1,0 +1,58 @@
+{
+  "employeeUser": [
+    {
+      "id": 1,
+      "name": "Adli",
+      "email": "adli@mail.com",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "name": "theo",
+      "email": "theo@mail.com",
+      "password": "123456"
+    },
+    {
+      "name": "tai",
+      "email": "test@mail.com",
+      "password": "1234123123",
+      "id": 3
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": 4
+    },
+    {
+      "name": "ccc",
+      "email": "fjaowfjaowfj",
+      "password": "aofjwoafj",
+      "id": 5
+    },
+    {
+      "name": "babi",
+      "email": "12345",
+      "password": "aofjwaojf",
+      "id": 6
+    },
+    {
+      "name": "babi",
+      "email": "12345",
+      "password": "aofjwaojf",
+      "id": 7
+    },
+    {
+      "name": "Adli F",
+      "email": "test@mail.com",
+      "password": "ffff",
+      "id": 8
+    },
+    {
+      "name": "Cr7",
+      "email": "rewaraw",
+      "password": "awfawf",
+      "id": 9
+    }
+  ]
+}
