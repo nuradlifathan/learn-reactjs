@@ -36,9 +36,10 @@ const ProductList = () => {
       setProducts(response.data)
     } catch (err) {
       console.log(err)
-      alert("Server Error")
+      alert("Server Error! start db/db.json")
     }
   }
+
   const btnDelete = async (id) => {
     try {
       await jsonProducts.delete(`/products/${id}`)

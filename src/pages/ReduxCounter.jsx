@@ -28,12 +28,15 @@ const ReduxCounter = () => {
   const incrementBtnHandler = () => {
     dispatch(increment())
   }
+
   const decrementBtnHandler = () => {
     dispatch(decrement())
   }
+
   const resetBtnHandler = () => {
     dispatch(reset())
   }
+
   const submitInput = () => {
     dispatch(addInput(Number(input)))
     // dispatch({

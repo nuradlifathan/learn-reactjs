@@ -4,13 +4,17 @@ import { Box, Text, Button, Stack, HStack } from "@chakra-ui/react"
 const Counter = () => {
   // counter didalam isinya data kita , setcounter data yg ingin kita ganti
   const [counter, setCounter] = useState(0)
-  const [showCounter, setShowCounter] = useState(true)
+  const [showCounter, setShowCounter] = useState(false)
 
   const incrementCounter = () => {
     setCounter(counter + 1)
   }
 
   const decrementCounter = () => {
+    // if (counter <= 0) {
+    //   return
+    // }
+
     setCounter(Math.max(0, counter - 1))
   }
 
@@ -42,10 +46,18 @@ const Counter = () => {
         <Text fontWeight={"bold"} fontSize={"2xl"}>
           Counter Page
         </Text>
-        <Text fontSize={"1xl"}>{counter}</Text>
+        {showCounter ? (
+          <Text fontSize={"1xl"} fontWeight="bold">
+            {counter}
+          </Text>
+        ) : null}
         {/* Stack adalah Div yang memiliki display flex dan direction column */}
 
         <Stack width="400px">
+          <Button colorScheme="pink" onClick={toggleCounter}>
+            Toogle Counter Visibility
+          </Button>
+
           <HStack spacing={"3"}>
             <Button
               flex={"1"}
@@ -65,9 +77,6 @@ const Counter = () => {
               Reset
             </Button>
           </HStack>
-          <Button colorScheme="pink" onClick={toggleCounter}>
-            Toogle Counter Visibility
-          </Button>
         </Stack>
       </Box>
     </>

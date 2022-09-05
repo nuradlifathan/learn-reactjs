@@ -26,7 +26,7 @@ const List = () => {
 
   return (
     <Box>
-      <Heading>List Page</Heading>
+      <Heading>Counter With UseEffect</Heading>
       <Button onClick={() => setCounter(counter + 1)}>Tambah</Button>
     </Box>
   )

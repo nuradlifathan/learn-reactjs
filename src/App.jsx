@@ -1,7 +1,6 @@
 import Profile from "./components/Profile/"
 import { Routes, Route, Link } from "react-router-dom"
 import Home from "./pages/Home"
-import About from "./pages/About"
 import Counter from "./pages/Counter"
 import TextPage from "./pages/Text"
 import List from "./pages/List"
@@ -14,7 +13,15 @@ import ProductList from "./pages/ProductList"
 import ProductEdit from "./pages/ProductEdit"
 import EmployeeList from "./pages/EmployeeList"
 import EmployeeRegister from "./pages/EmployeeRegister"
-import { Text, Tab, Tabs, TabList, TabPanels, Box } from "@chakra-ui/react"
+import {
+  Text,
+  Tab,
+  Tabs,
+  TabList,
+  TabPanels,
+  Box,
+  Divider,
+} from "@chakra-ui/react"
 import { useSelector } from "react-redux"
 
 const data = [
@@ -57,15 +64,12 @@ function App() {
       <Text fontSize={"3xl"} fontWeight={"bold"} color={"red.400"}>
         React.Js!
       </Text>
-      <hr />
+      <Divider />
       {/* <Text fontWeight="1000">Counter : {counterSelector.value}</Text> */}
-      <Tabs variant="enclosed">
+      <Tabs variant="enclosed" overflow="scroll">
         <TabList fontWeight="4">
           <Tab>
             <Link to="Home"> Home</Link>
-          </Tab>
-          <Tab>
-            <Link to="About">About</Link>
           </Tab>
           <Tab>
             <Link to="Counter">Counter</Link>
@@ -108,7 +112,6 @@ function App() {
       {/* below here is to acces Routes */}
       <Routes>
         <Route path="/Home" element={<Home />} />
-        <Route path="/About" element={<About />} />
         <Route path="/Counter" element={<Counter />} />
         <Route path="/Text" element={<TextPage />} />
         <Route path="/List" element={<List />} />
